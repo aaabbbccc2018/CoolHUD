@@ -21,7 +21,7 @@ const CGFloat ridus = 50 ;
     self = [super init] ;
     if(self)
     {
-        self.delegate = self ;
+        self.lineWeight = 1 ;
     }
     return self ;
 }
@@ -42,8 +42,11 @@ const CGFloat ridus = 50 ;
     
     if([self animationForKey:@"ch_success"])
     {
+        //分成三段来绘制
         CGFloat spe01 = 0.8;
         CGFloat spe12 = 0.9 ;
+        
+        
         CGFloat progress0 = 0 ;
         CGFloat progress1 = 0 ;
         CGFloat progress2 = 0 ;
