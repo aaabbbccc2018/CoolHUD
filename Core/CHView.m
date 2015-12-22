@@ -44,35 +44,41 @@
     self.circleLayer.frame = self.layer.bounds ;
     [self.layer addSublayer:self.circleLayer] ;
 }
+
+- (CABasicAnimation*)baseAnimation
+{
+    CABasicAnimation* baseAnimation = [CABasicAnimation animationWithKeyPath:@"progress"] ;
+    baseAnimation.fillMode = @"forward" ;
+    baseAnimation.removedOnCompletion = NO ;
+   
+    
+    return baseAnimation ;
+}
+
 - (void)showProgress
 {
     [self.circleLayer removeAllAnimations];
-    CABasicAnimation* baseAnimation = [CABasicAnimation animationWithKeyPath:@"progress"] ;
-    baseAnimation.fromValue = @0 ;
-    baseAnimation.toValue = @1 ;
-    baseAnimation.duration = 1.5f ;
+    CABasicAnimation* baseAnimation = [self baseAnimation];
     baseAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     baseAnimation.autoreverses = NO ;
     baseAnimation.repeatCount = INFINITY ;
-    baseAnimation.fillMode = @"forward" ;
-    baseAnimation.removedOnCompletion = NO ;
-    [self.circleLayer addAnimation:baseAnimation forKey:@"ch_progress"] ;
+    baseAnimation.fromValue = @0 ;
+    baseAnimation.toValue = @1 ;
+    baseAnimation.duration = 1.5f ;
+    [self.circleLayer addAnimation:baseAnimation forKey:PROGRESS] ;
 }
 
 - (void)success
 {
     [self.circleLayer removeAllAnimations];
-    CABasicAnimation* baseAnimation = [CABasicAnimation animationWithKeyPath:@"progress"] ;
+    CABasicAnimation* baseAnimation = [self baseAnimation] ;
     baseAnimation.fromValue = @0 ;
     baseAnimation.toValue = @1 ;
     baseAnimation.duration = 1.f ;
     baseAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     baseAnimation.autoreverses = NO ;
-//    baseAnimation.repeatCount = INFINITY ;
-    baseAnimation.fillMode = @"forward" ;
-    baseAnimation.removedOnCompletion = NO ;
     baseAnimation.delegate = self ;
-    [self.circleLayer addAnimation:baseAnimation forKey:@"ch_success"] ;
+    [self.circleLayer addAnimation:baseAnimation forKey:SUCCESS] ;
 }
 
 - (void)warning
@@ -82,7 +88,15 @@
 
 - (void)error
 {
-    
+    [self.circleLayer removeAllAnimations];
+    CABasicAnimation* baseAnimation = [self baseAnimation] ;
+    baseAnimation.fromValue = @0 ;
+    baseAnimation.toValue = @1 ;
+    baseAnimation.duration = 1.f ;
+    baseAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    baseAnimation.autoreverses = NO ;
+    baseAnimation.delegate = self ;
+    [self.circleLayer addAnimation:baseAnimation forKey:ERROR] ;
 }
 
 #pragma mark - Animation Delegate

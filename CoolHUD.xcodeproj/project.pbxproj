@@ -18,6 +18,12 @@
 		C335B4101C11E4D600E8B932 /* CHCompleteCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C335B40F1C11E4D600E8B932 /* CHCompleteCircleLayer.m */; };
 		C335B4121C11E5D900E8B932 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C335B4111C11E5D900E8B932 /* QuartzCore.framework */; };
 		C3D348681C16AA730065BD49 /* CHView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D348671C16AA730065BD49 /* CHView.m */; };
+		C3D873AA1C194C4F00C1A005 /* CHView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D348671C16AA730065BD49 /* CHView.m */; };
+		C3D873AB1C194C5000C1A005 /* CHView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D348671C16AA730065BD49 /* CHView.m */; };
+		C3D873AC1C194C5200C1A005 /* CHCompleteCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C335B40F1C11E4D600E8B932 /* CHCompleteCircleLayer.m */; };
+		C3D873AD1C194C5200C1A005 /* CHCompleteCircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C335B40F1C11E4D600E8B932 /* CHCompleteCircleLayer.m */; };
+		C3D873AE1C1953A200C1A005 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C335B3E11C11C30A00E8B932 /* ViewController.m */; };
+		C3D873AF1C1953A200C1A005 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C335B3E11C11C30A00E8B932 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -305,6 +311,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C335B3F51C11C30A00E8B932 /* CoolHUDTests.m in Sources */,
+				C3D873AC1C194C5200C1A005 /* CHCompleteCircleLayer.m in Sources */,
+				C3D873AE1C1953A200C1A005 /* ViewController.m in Sources */,
+				C3D873AA1C194C4F00C1A005 /* CHView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +322,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C335B4001C11C30A00E8B932 /* CoolHUDUITests.m in Sources */,
+				C3D873AD1C194C5200C1A005 /* CHCompleteCircleLayer.m in Sources */,
+				C3D873AF1C1953A200C1A005 /* ViewController.m in Sources */,
+				C3D873AB1C194C5000C1A005 /* CHView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

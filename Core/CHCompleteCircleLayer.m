@@ -25,6 +25,17 @@ const CGFloat ridus = 50 ;
     }
     return self ;
 }
+
+- (instancetype)initWithLayer:(id)layer
+{
+    self = [super initWithLayer:layer] ;
+    if(self)
+    {
+        self.lineWeight = 1 ;
+    }
+    return self ;
+}
+
 //根据key来判断是否需要重绘
 + (BOOL)needsDisplayForKey:(NSString *)key
 {
@@ -40,7 +51,7 @@ const CGFloat ridus = 50 ;
 - (void)drawInContext:(CGContextRef)ctx
 {
     
-    if([self animationForKey:@"ch_success"])
+    if([self animationForKey:SUCCESS])
     {
         //分成三段来绘制
         CGFloat spe01 = 0.8;
@@ -124,7 +135,7 @@ const CGFloat ridus = 50 ;
         CGContextSetStrokeColorWithColor(ctx, [UIColor greenColor].CGColor) ;
         CGContextStrokePath(ctx);
     }
-    else if([self animationForKey:@"ch_progress"])
+    else if([self animationForKey:PROGRESS])
     {
         CGFloat endOffset = 0 ;
         

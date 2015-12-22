@@ -8,6 +8,12 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+#define PROGRESS    @"ch_progress"
+#define SUCCESS     @"ch_success"
+#define ERROR       @"ch_failed"
+#define WARNING     @"ch_warning"
+
+
 
 @interface CHCompleteCircleLayer : CALayer
 @property(nonatomic,assign)CGFloat progress ;
